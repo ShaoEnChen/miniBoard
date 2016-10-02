@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="UTF-8">
+	  <title>Mini Challenge</title>
+	  {% load static %}
+	  <link rel="stylesheet" href="{% static "leaderboard/board.css" %}">
+	</head>
+	<body>
+		<h1 id="title">棉花糖挑戰</h1>
+		{% if isEmpty != None %}
+			{% for result in results %}
+				<div class="record">
+					<span class="rn">{{ result.name }}</span>
+					<span class="rh">{{ result.height }}</span>
+				</div>
+			{% endfor %}
+		{% else %}
+			<h3>目前沒有人進行棉花糖挑戰喔～</h3>
+		{% endif %}
+		<div class="form">
+			<form action="/add/" method="post" id="add">
+				<p>
+					<label for="iname">請輸入姓名：</label>
+					<input id="iname" size="20" type="text" name="name" required>
+				</p>
+				<p>
+					<label for="iname">請輸入高度：</label>
+					<input id="iheight" step="0.01" type="number" name="height" required>
+				</p>
+				<p>
+					<input type="submit" vslue="送出">
+				</p>
+			</form>
+		</div>
+		<img id="bg" src="{% static "img/bg.png" %}">
+		<script src="{% static "leaderboard/board.js" %}"></script>
+	</body>
+</html>

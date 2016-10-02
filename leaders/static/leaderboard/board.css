@@ -1,0 +1,55 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@font-face{
+    font-family: Jaapokki-Regular;
+    src: url('../font/Jaapokki-Regular.otf');
+}
+@font-face{
+    font-family: Coves-Bold;
+    src: url('../font/Coves Bold.otf');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Coves-Bold', 'Noto Sans TC', sans-serif;
+}
+body {
+	background-color: #b2b2b2;
+	text-align: center;
+}
+.record {
+	width: 100%;
+	color: #ffeb32;
+}
+.record .rn {
+	font-size: 54px;
+}
+.record .rh {
+	font-size: 108px;
+}
+
+.form {
+	position: absolute;
+	width: 28%;
+	bottom: 2%;
+	right: 2%;
+	padding: 16px;
+	background-color: #666;
+}
+#add input[type=submit] {
+	padding: 10px;
+	background-color: #000;
+	font-size: 20px;
+	color: #fff;
+	border: none;
+}
+#add p {
+	margin: 12px auto;
+}
+#bg {
+	width: 40%;
+	height: auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
