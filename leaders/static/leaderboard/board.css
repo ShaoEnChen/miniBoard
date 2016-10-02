@@ -15,26 +15,66 @@
 }
 body {
 	background-color: #b2b2b2;
+}
+#title {
 	text-align: center;
 }
 .record {
-	width: 100%;
+	width: 60%;
+	margin-left: 20%;
+}
+.record tr:nth-child(1),
+.record tr:nth-child(2),
+.record tr:nth-child(3) {
 	color: #ffeb32;
 }
+.record tr:nth-child(4),
+.record tr:nth-child(5) {
+	color: #ddd;
+}
+
 .record .rn {
+	text-align: right;
+}
+.record tr:nth-child(1) .rn,
+.record tr:nth-child(2) .rn,
+.record tr:nth-child(3) .rn {
 	font-size: 54px;
 }
+.record tr:nth-child(4) .rn,
+.record tr:nth-child(5) .rn {
+	font-size: 42px;
+}
+
 .record .rh {
+	padding-left: 50px;
+}
+.record tr:nth-child(1) .rh,
+.record tr:nth-child(2) .rh,
+.record tr:nth-child(3) .rh {
 	font-size: 108px;
+}
+.record tr:nth-child(4) .rh,
+.record tr:nth-child(5) .rh {
+	font-size: 88px;
+}
+
+#empty {
+	margin-top: 144px;
+	color: #ffeb32;
+	font-size: 54px;
+	text-align: center;
 }
 
 .form {
 	position: absolute;
-	width: 28%;
+	width: 20%;
 	bottom: 2%;
 	right: 2%;
 	padding: 16px;
-	background-color: #666;
+	background-color: transparent;
+	text-align: center;
+	z-index: -1;
 }
 #add input[type=submit] {
 	padding: 10px;
@@ -52,4 +92,5 @@ body {
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	z-index: -1;
 }

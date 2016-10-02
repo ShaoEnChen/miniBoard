@@ -9,14 +9,16 @@
 	<body>
 		<h1 id="title">棉花糖挑戰</h1>
 		{% if isEmpty != None %}
+			<table class="record">
 			{% for result in results %}
-				<div class="record">
-					<span class="rn">{{ result.name }}</span>
-					<span class="rh">{{ result.height }}</span>
-				</div>
+				<tr>
+					<td class="rn">{{ result.name }}</td>
+					<td class="rh">{{ result.height }}</td>
+				</tr>
 			{% endfor %}
+			</table>
 		{% else %}
-			<h3>目前沒有人進行棉花糖挑戰喔～</h3>
+			<h3 id="empty">目前沒有人進行棉花糖挑戰喔～</h3>
 		{% endif %}
 		<div class="form">
 			<form action="/add/" method="post" id="add">
@@ -34,6 +36,5 @@
 			</form>
 		</div>
 		<img id="bg" src="{% static "img/bg.png" %}">
-		<script src="{% static "leaderboard/board.js" %}"></script>
 	</body>
 </html>
