@@ -16,8 +16,9 @@ def board_view(request):
 
 def add_record(request):
 	if request.method == 'POST':
-		if 'name' in request.POST and 'height' in request.POST:
+		if 'name' in request.POST and 'height' in request.POST and 'contact' in request.POST:
 			name = request.POST['name']
 			height = request.POST['height']
-			Record.objects.create(name = name, height = height)
+			contact = request.POST['contact']
+			Record.objects.create(name = name, height = height, contact = contact)
 	return redirect('/')
